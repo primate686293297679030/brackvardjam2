@@ -4,13 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
   - bullet
   - ground
+=======
+  - ground
+  - Gun
+  - bullet
+  - PlayerCollider
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - ground
   - Water
   - UI
   - 
