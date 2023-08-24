@@ -38,12 +38,14 @@ public class ActualMap : MonoBehaviour
         {
             for (int y = 0; y < height; ++y)
             {
-                var pos = new Vector3(x, -y, 0);
+                var pos = new Vector3(x*0.2f, -y*0.2f, 0);
 
 
                 GameObject tile = Instantiate(tilePrefab,parent.transform.position+pos , Quaternion.identity);
                 tile.GetComponent<SpriteRenderer>().sprite = GetBiome(heightMap[x, y], moistureMap[x, y], heatMap[x, y]).GetTleSprite();
-               
+                tile.AddComponent<BoxCollider2D>();
+
+                // tile.GetComponent<BoxCollider2D>().size
             }
         }
     }
