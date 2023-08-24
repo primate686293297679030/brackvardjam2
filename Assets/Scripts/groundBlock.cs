@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class groundBlock : MonoBehaviour
 {
+
+              
     // Start is called before the first frame update
     void Start()
     {
@@ -22,13 +24,21 @@ public class groundBlock : MonoBehaviour
         // Check if the collision should trigger destruction (e.g., explosion, character attack)
         if (collision.gameObject.CompareTag("bullet"))
         {
-            Debug.Log("owieiurorhhgoiouewhrg");
+            Debug.Log("collision with bullet");
+
+           Destroy(this.gameObject);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-
+        // Check if the collision should trigger destruction (e.g., explosion, character attack)
+        if (collider.gameObject.CompareTag("bullet"))
+        {
+            Debug.Log("collision with bullet");
+            Destroy(collider.gameObject);
+            Destroy(this.gameObject);
+        }
     }
 
 }

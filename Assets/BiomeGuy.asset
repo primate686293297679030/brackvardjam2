@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865598b98224c4a4fbca1c42d5a9bcaa, type: 3}
+  m_Name: BiomeGuy
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 21300000, guid: 1cc79b35693a97645bd7fd57ed3dc997, type: 3}
+  - {fileID: 21300000, guid: fbcef93cabe3dc94f9aa1577fb504229, type: 3}
+  - {fileID: 21300000, guid: 8f2c93706eb5e1e4d9a69d7dc29c1932, type: 3}
+  minHeight: 0
+  minMoisture: 0
+  minHeat: 0
