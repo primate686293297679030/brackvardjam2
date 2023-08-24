@@ -22,7 +22,9 @@ public class groundBlock : MonoBehaviour
         // Check if the collision should trigger destruction (e.g., explosion, character attack)
         if (collision.gameObject.CompareTag("bullet"))
         {
-            Debug.Log("owieiurorhhgoiouewhrg");
+            Debug.Log("collision with bullet");
+
+           Destroy(this.gameObject);
         }
     }
 
