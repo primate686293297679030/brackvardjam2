@@ -460,7 +460,7 @@ Transform:
   m_GameObject: {fileID: 1421617404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.9619, y: -0.0319, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.5637}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.5637}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -535,7 +535,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1809899937}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b57474dd4f21bef4cbdb3bbc6e64971e, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -786,6 +786,10 @@ PrefabInstance:
       propertyPath: groundMask.m_Bits
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 9048456055129017114, guid: 2c3b8e6bb8eaea149af180dcfd0c5c4c, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: b57474dd4f21bef4cbdb3bbc6e64971e, type: 2}
     - target: {fileID: 9048456055129017119, guid: 2c3b8e6bb8eaea149af180dcfd0c5c4c, type: 3}
       propertyPath: m_Name
       value: Player
