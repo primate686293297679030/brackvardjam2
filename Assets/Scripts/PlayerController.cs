@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -17,6 +18,7 @@ namespace DefaultNamespace
         private Rigidbody2D _rigidbody2D;
         private Vector2 _move;
         private bool _jump;
+        private bool _canShoot = true;
         
         private void Start()
         {
@@ -50,11 +52,12 @@ namespace DefaultNamespace
             if (gunObject != null)
             {
                 gunObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-                if (Input.GetButton("Fire1"))
+                if (Input.GetButton("Fire1") && _canShoot)
                 {
                     var bullet = Instantiate(gunScriptableObject.ammoType, gunObject.transform.position, gunObject.transform.rotation);
                     var rb = bullet.GetComponent<Rigidbody2D>();
                     rb.velocity = bullet.transform.right * 10f;
+                    StartCoroutine(ShotCooldown());
                 }
 
                 if (Input.GetKey(KeyCode.G))
@@ -80,6 +83,13 @@ namespace DefaultNamespace
                 _jump = false;
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpSpeed);
             }
+        }
+
+        private IEnumerator ShotCooldown()
+        {
+            _canShoot = false;
+            yield return new WaitForSeconds(1f / gunScriptableObject.fireRate);
+            _canShoot = true;
         }
     }
 }
