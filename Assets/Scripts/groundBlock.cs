@@ -7,6 +7,8 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class groundBlock : MonoBehaviour
 {
+    private ParticleSystem hit;
+    [SerializeField]private GameObject hitVFX;
     private string name;  
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,8 @@ public class groundBlock : MonoBehaviour
             Debug.Log("collision with bullet");
             Destroy(collider.gameObject);
             Destroy(this.gameObject);
+            Instantiate(hitVFX, collider.transform.position, Quaternion.identity);
+
         }
 
 
