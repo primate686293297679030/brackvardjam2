@@ -28,7 +28,7 @@ public class depthMeter : MonoBehaviour
     float getDepth()
     {
         float depth;
-        depth= GroundLevel.transform.position.y- player.transform.position.y;
+        depth= player.transform.position.y - GroundLevel.transform.position.y;
 
         return depth;
     }
