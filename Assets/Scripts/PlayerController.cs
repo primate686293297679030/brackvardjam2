@@ -100,6 +100,7 @@ namespace DefaultNamespace
         private IEnumerator ShotCooldown()
         {
             _canShoot = false;
+            GetComponent<Shake>().start = true;
             yield return new WaitForSeconds(1f / gunScriptableObject.fireRate);
             _canShoot = true;
         }
