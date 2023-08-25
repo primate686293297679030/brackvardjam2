@@ -611,7 +611,7 @@ PrefabInstance:
     - target: {fileID: 4043333475749108771, guid: 8b9bf2a83a6c36c4f9fabe8eeef82e32, type: 3}
       propertyPath: muzzle
       value: 
-      objectReference: {fileID: 2591720923472780087, guid: 4e795e11c43bebd4fbacf25ea436c119, type: 3}
+      objectReference: {fileID: 2591720923472780088, guid: 4e795e11c43bebd4fbacf25ea436c119, type: 3}
     - target: {fileID: 4043333475749108771, guid: 8b9bf2a83a6c36c4f9fabe8eeef82e32, type: 3}
       propertyPath: muzzleObj
       value: 
@@ -739,6 +739,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5778961616265009342, guid: 64b043b6fcf063d40ac4f3d45290c2e5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.725
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778961616265009342, guid: 64b043b6fcf063d40ac4f3d45290c2e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.637
+      objectReference: {fileID: 0}
     - target: {fileID: 8946442986140364853, guid: 64b043b6fcf063d40ac4f3d45290c2e5, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -785,7 +793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8946442986140365256, guid: 64b043b6fcf063d40ac4f3d45290c2e5, type: 3}
       propertyPath: m_Name
-      value: Gun 1
+      value: GunGuy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64b043b6fcf063d40ac4f3d45290c2e5, type: 3}
