@@ -4,19 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - ground
-  - bullet
   - Gun
+  - ground
   - PlayerCollider
+  - bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - Ground
   - Water
   - UI
+  - Player
   - Object
-  - Ground
   - 
   - 
   - 
@@ -40,8 +40,17 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - UI2
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer 1
+    uniqueID: 3684795699
+    locked: 0
+  - name: New Layer 2
+    uniqueID: 1870412925
+    locked: 0
+  - name: UI
+    uniqueID: 812036275
     locked: 0
