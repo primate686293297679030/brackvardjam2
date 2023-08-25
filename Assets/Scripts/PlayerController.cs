@@ -19,7 +19,10 @@ namespace DefaultNamespace
         private Vector2 _move;
         private bool _jump;
         private bool _canShoot = true;
-        
+       // public ParticleSystem muzzle;
+
+       public GameObject muzzle;
+       public GameObject muzzlePos;
         private void Start()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -46,6 +49,12 @@ namespace DefaultNamespace
                 gunObject.transform.parent = gameObject.transform;
                 gunObject.GetComponent<Rigidbody2D>().simulated = false;
                 gunScriptableObject = gunObject.GetComponent<Gun>().gunScriptableObject;
+
+                muzzlePos = GameObject.Find("GunGuy(Clone)").gameObject.transform.GetChild(0).gameObject;
+              var muzzleGuy=  Instantiate(muzzle, muzzlePos.transform.position, Quaternion.identity);
+              muzzleGuy.transform.SetParent(muzzlePos.transform.parent);
+              muzzle = muzzleGuy;
+             
                 Destroy(playerCollider.currentObject);
             }
 
@@ -54,10 +63,13 @@ namespace DefaultNamespace
                 gunObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
                 if (Input.GetButton("Fire1") && _canShoot)
                 {
-                    var bullet = Instantiate(gunScriptableObject.ammoType, gunObject.transform.position, gunObject.transform.rotation);
+                    Debug.Log("3232r23r");
+                    var bullet = Instantiate(gunScriptableObject.ammoType, muzzlePos.transform.position, gunObject.transform.rotation);
                     var rb = bullet.GetComponent<Rigidbody2D>();
                     rb.velocity = bullet.transform.right * 10f;
+                    muzzle.GetComponent<ParticleSystem>().Play();
                     StartCoroutine(ShotCooldown());
+                   
                 }
 
                 if (Input.GetKey(KeyCode.G))
